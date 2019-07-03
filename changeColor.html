@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行变色</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .box {
+            margin: 20px auto;
+            width: 300px;
+        }
+
+        .box li {
+            padding: 0 5px;
+            line-height: 35px;
+            border-bottom: 1px dashed #AAA;
+        }
+
+        /*     .box li:nth-of-type(even){
+                color: red;
+            }
+            .box li:hover{
+                background:lightblue;
+            }*/
+
+        .bg0 {
+            background: red;
+        }
+
+        .bg1 {
+            background: blue;
+        }
+
+        .bg2 {
+            background: green;
+        }
+
+        .hover {
+            background: lightblue;
+        }
+
+        h1 {
+            background: red;
+            font-size: 30px;
+            font-family: Verdana, Serif;
+            text-align: center;
+        }
+
+        h1:hover {
+            font-size: 50px;
+        }
+    </style>
+
+</head>
+<body bgcolor="#add8e6">
+<h1 style="background: red;font-family: 'verdana',serif;font-size: 30px;text-align: center">
+    <del>我的第一个标题</del>
+</h1>
+<h1>我的第二个标题</h1>
+<del>111</del>
+<hr style="border-bottom-color:black">
+<p>我的第一个段落</p>
+<hr>
+<a href="https://www.baidu.com" style="text-decoration: none">百度</a>
+<hr>
+<br/>
+<a href="./tab.html">跳转</a>
+
+
+<ul class="box" id="box">
+    <li>西风烈，</li>
+    <li>长空雁叫霜晨月。</li>
+    <li>霜晨月，</li>
+    <li>马蹄声碎，喇叭声咽；</li>
+    <li>雄关漫道真如铁，而今迈步从头越。</li>
+    <li>从头越，</li>
+    <li>苍山如海，残阳如血。</li>
+</ul>
+<script src="js/2.js"></script>
+<script src="js/string.js"></script>
+</body>
+</html>

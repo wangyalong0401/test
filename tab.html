@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .tabBox {
+            margin: 20px auto; /*水平居中，上下20 左右auto*/
+            width: 500px;
+        }
+
+        .tabBox ul {
+            position: relative;
+            top: 1px;
+        }
+
+        .tabBox ul li {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 0 10px;
+            line-height: 33px;
+            border: 1px solid #AAA;
+            cursor: pointer;
+        }
+
+        .tabBox ul li.active {
+            border-bottom-color: #ffffff;
+        }
+
+        .tabBox div {
+            display: none;
+            line-height: 148px;
+            text-align: center;
+            border: 1px solid #AAA;
+        }
+
+        .tabBox div.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="tabBox" id="tabBox">
+    <ul>
+        <li class="active">新闻</li>
+        <li>电影</li>
+        <li>音乐</li>
+    </ul>
+
+    <div class="active">伊朗核问题</div>
+    <div>最新电影</div>
+    <div>最新音乐</div>
+</div>
+
+<script src="js/changeTab.js"></script>
+</body>
+</html>
