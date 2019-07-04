@@ -27,6 +27,7 @@ console.log(i);*/
 +function () {
 
 };*/
+
 /*求和*/
 function sum() {
     var total = null;
@@ -103,3 +104,12 @@ for (let i = 0; i < ary.length; i++) {
 }
 console.log(ary);
 //Math.round(Math.random() * (m - n) + n)//获取m-n之间的随机整数
+
+var aa = (function () {
+    return {
+        aa: function () {
+
+        }
+    }
+
+})()

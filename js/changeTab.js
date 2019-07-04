@@ -28,14 +28,24 @@ console.log(aa[0].getElementsByTagName('li'));
 //         changetab(i);
 //     }
 // }
-// function changetab(n) {
-//     for (var i = 0; i < tablist.length; i++) {
-//         tablist[i].className = '';
-//         divlist[i].className = '';
-//     }
-//     tablist[n].className = 'active';
-//     divlist[n].className = 'active';
-// }
+//循环三次，形成三个不销毁的私有作用域（自执行函数执行），而每一个不销毁的栈内存中都存储了i，
+//点击时执行返回的小函数，遇到变量i，向上级作用域查找，找到是1、2、3
+for (var i = 0; i < tablist.length; i++) {
+    tablist[i].onclick = (function (n) {
+        var i=n;
+        return function () {
+            changetab(i);
+        }
+    })(i);
+}
+function changetab(n) {
+    for (var i = 0; i < tablist.length; i++) {
+        tablist[i].className = '';
+        divlist[i].className = '';
+    }
+    tablist[n].className = 'active';
+    divlist[n].className = 'active';
+}
 
 /*var lastIndex=0;
 for (let i = 0; i < tablist.length; i++) {
@@ -51,6 +61,7 @@ for (let i = 0; i < tablist.length; i++) {
     }
 }*/
 
+/*
 for (var i = 0; i < tablist.length; i++) {
     tablist[i].onclick = function () {
         changetab2(this);
@@ -68,6 +79,8 @@ function changetab2(m) {
         }
     }
 }
+*/
+
 
 for (let i = 0; i < tablist.length; i++) {
     tablist[i].onmouseover = function () {
