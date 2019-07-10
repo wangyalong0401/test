@@ -2,7 +2,6 @@ var codeBox = document.getElementById('codeBox');
 var link = document.getElementById('link');
 console.log(codeBox);
 console.log(link);
-
 /*获取四位不重复的验证码*/
 function queryCode() {
     var codeArea = 'qwertyuiopasdfghjklzxcvbnm' +
@@ -60,6 +59,8 @@ function prev(culEle) {
 
 console.log(prev(test));
 console.log(test.previousElementSibling);
+
+var box=document.getElementById('box');
 /*创建p标签*/
 var newP=document.createElement('p');
 var newA=document.createElement('A');
@@ -74,6 +75,10 @@ document.body.insertBefore(newA,box);
 var cloneA=newA.cloneNode();
 var cloneA=newA.cloneNode(true);//深度克隆，内容也克隆
 document.body.appendChild(cloneA);
+box.appendChild(newA);
+box.appendChild(newP);
+box.appendChild(newA);
+
 /*删除标签*/
 //document.body.removeChild(newP);
 //document.body.removeChild(box);
